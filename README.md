@@ -8,12 +8,21 @@ generate PPTX from Image Files
   - 縦横比はスライドと同じ(3:4)になります。
 * 大量のスクリーンショットを元にスライドを作成するような用途を想定しています。
 
+
+install
+-------
+
+```
+$ npm install -g git://github.com/Kazunori-Kimura/images2pptx
+```
+
+
 usage
 ------
 
     images2pptx <image folder> <powerpoint file>
 
     例:
-        images2pptx ~/Desktop/ScreenShot slide.pptx
+        images2pptx /Users/kimura/ScreenShot slide.pptx
 
 
