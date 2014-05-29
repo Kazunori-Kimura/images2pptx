@@ -1,13 +1,19 @@
 generate PPTX from Image Files
 ================================
 
-* [officegen](https://github.com/Ziv-Barber/officegen)
+画像ファイル (jpg, png, gif, bmp) から PowerPointファイルを生成します。
+
+* 指定されたフォルダにある画像を中央に貼り付けたスライドを自動的に作成します。
+  - 画像はスライドの70%のサイズに拡大 or 縮小されます。
+  - 縦横比はスライドと同じ(3:4)になります。
+* 大量のスクリーンショットを元にスライドを作成するような用途を想定しています。
 
 usage
----------
+------
 
-1. create `list.txt`, image file list.
-2. `node index.js`
-3. created `out.pptx` from image files.
+    images2pptx <image folder> <powerpoint file>
+
+    例:
+        images2pptx ~/Desktop/ScreenShot slide.pptx
 
 
