@@ -1,9 +1,14 @@
 {
-  "name": "make-pptx",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "images2pptx",
+  "version": "0.0.1",
+  "description": "generate PPTX from Image Files",
+  "main": "lib",
+  "bin": {
+    "images2pptx": "bin/images2pptx"
+  },
   "dependencies": {
+    "commander": "^2.2.0",
+    "here": "0.0.2",
     "officegen": "^0.2.8"
   },
   "devDependencies": {},
@@ -15,5 +20,13 @@
     "officegen"
   ],
   "author": "kazunori-kimura",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kazunori-Kimura/images2pptx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kazunori-Kimura/images2pptx/issues"
+  },
+  "homepage": "https://github.com/Kazunori-Kimura/images2pptx"
 }

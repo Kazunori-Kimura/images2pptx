@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+process.bin = process.title = 'images2pptx';
+
+var commander = require("commander"),
+    here = require("here").here,
+    gen = require("../lib");
+
+var package = require("../package.json");
+
+//command option
+commander.version(package.version)
+    .usage("<images directory> <pptx file name>")
+
+//help message
+commander.on("--help", function(){
+    console.log(here(/*
+  Example:
+    images2pptx ~/picturs presentation.pptx
+*/).unindent());
+});
+
+commander.parse(process.argv);
+
+if(commander.args.length > 1){
+    gen.generate(commander.args[0], commander.args[1], function(err, file){
+        if(err){
+            console.log(err);
+        }
+    });
+}
